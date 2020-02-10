@@ -115,6 +115,8 @@ temp/
 
 node_modules
 
+uploads/
+
 *.sublime*
 
 psd
