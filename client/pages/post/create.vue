@@ -1,9 +1,13 @@
 <template>
-  <v-container>
-    <div></div>
-  </v-container>
+  <post-create />
 </template>
 
 <script>
-export default {};
+import postCreate from '@/components/postProvider/postComponents/postCreate.vue';
+export default {
+  // middleware: 'authenticated',
+  components: {
+    postCreate
+  }
+};
 </script>

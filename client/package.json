@@ -20,6 +20,9 @@
   },
   "devDependencies": {
     "@editorjs/editorjs": "^2.16.1",
+    "@editorjs/header": "^2.4.0",
+    "@editorjs/list": "^1.4.0",
+    "@editorjs/paragraph": "^2.6.1",
     "@nuxtjs/eslint-config": "^1.0.1",
     "@nuxtjs/eslint-module": "^1.0.0",
     "@nuxtjs/vuetify": "^1.0.0",

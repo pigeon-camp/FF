@@ -8,8 +8,14 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING(150),
       allowNull: true
     },
-    image: {
-      type: DataTypes.STRING(200),
+    images: {
+      type: DataTypes.STRING(301),
+      get: function() {
+        return JSON.parse(this.getDataValue('images'));
+      }, 
+      set: function(val) {
+          return this.setDataValue('images', JSON.stringify(val));
+      },
       allowNull: true
     }
   }, {

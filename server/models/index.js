@@ -8,7 +8,7 @@ console.log(DB_URL, 'asdfasdfsadf');
 const sequelize = new Sequelize(DB_URL, {
   dialectOptions: {
     charset: 'utf8',
-    // multipleStatements: true // 예를들어 post, posts의 테이블 2개가 생성
+    multipleStatements: true // 예를들어 post, posts의 테이블 2개가 생성
   }
 });
 sequelize.authenticate().then(() => {

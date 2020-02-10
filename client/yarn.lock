@@ -789,6 +789,21 @@
     codex-notifier "^1.1.2"
     codex-tooltip "^1.0.0"
 
+"@editorjs/header@^2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@editorjs/header/-/header-2.4.0.tgz#0ac14bf68e4a01305bbb20c8ffb754a75a3d374a"
+  integrity sha512-gXq7LkMWWno0c6vYDIROn0vqGnbQ/sGENljdtTWSBefCUqzKlqbQaeN4x4IqqvxCvOiH3RtdjJvfv92/ziIxmg==
+
+"@editorjs/list@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@editorjs/list/-/list-1.4.0.tgz#e92459a8ac2305bc4385245e329c8b5c8437456a"
+  integrity sha512-iYDXGbVXvsAJbSxbjFMP4p7kS1zhQyNDqVNzkfMRhItulzKYlOMlFjTIGHqu5SxPy6NrcckhVFaWdfGDn5/gEA==
+
+"@editorjs/paragraph@^2.6.1":
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/@editorjs/paragraph/-/paragraph-2.6.1.tgz#efd21da9912686024abd96eedd0c2258193f7d31"
+  integrity sha512-YaV8nVQVS3iMKig/XwmX0+Bq4NxHymWdUPdwpaAyyhOoo6z0ht5uhEzDG9QOOTVKsimcmR49bJLEtl3dlBoqxA==
+
 "@jest/console@^24.7.1", "@jest/console@^24.9.0":
   version "24.9.0"
   resolved "https://registry.yarnpkg.com/@jest/console/-/console-24.9.0.tgz#79b1bc06fb74a8cfb01cbdedf945584b1b9707f0"

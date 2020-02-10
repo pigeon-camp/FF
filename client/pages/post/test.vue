@@ -33,7 +33,10 @@
       lacinia. Mauris ex diam, sodales sed maximus a, auctor vitae urna.
       Vestibulum id dictum erat, et dignissim est. Curabitur auctor hendrerit
       urna, nec pretium sem.
-      {{ test }}
+      <div>
+        <img :src="test" />
+      </div>
+      <!-- {{ test }} -->
     </div>
 
     <div>
@@ -57,12 +60,11 @@
 export default {
   data() {
     return {
-      test:
-        'ddd<v-img src="https://picsum.photos/510/300?random" /> 인데 아아아아 그것은 <v-img src="https://picsum.photos/510/300?random" /> 이것인가'
+      test: 'https://picsum.photos/510/300?random'
     };
   },
   created() {
-    // console.log(this);
+    console.log(this);
   }
 };
 </script>

@@ -5,7 +5,11 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon app",
-    "db:migrate": "sequelize db:migrate"
+    "db:migrate": "sequelize db:migrate",
+    "db:migrate:undo:all": "sequelize db:migrate:undo:all",
+    "db:migrate:undo": "sequelize db:migrate:undo",
+    "db:drop": "sequelize db:drop my_database",
+    "db:create": "sequelize db:create my_database"
   },
   "dependencies": {
     "bcrypt-nodejs": "^0.0.3",
@@ -17,6 +21,7 @@
     "http-errors": "^1.7.3",
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.9.1",
+    "multer": "^1.4.2",
     "mysql2": "^2.1.0",
     "passport": "^0.4.1",
     "passport-kakao": "^1.0.0",
