@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import userMain from '@/components/userComponent/userMain.vue';
+import userMain from '@/components/userProvider/userComponent/userMain.vue';
 
 export default {
   components: {

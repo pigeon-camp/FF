@@ -1,3 +1,4 @@
+// const path = require('path');
 import colors from 'vuetify/es5/util/colors';
 
 export default {
@@ -30,7 +31,10 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [{ src: '~/plugins/editor/editorjs', mode: 'client' }],
+  plugins: [
+    { src: '~/plugins/editor/editorjs', mode: 'client' },
+    { src: '~/plugins/moment' }
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -89,6 +93,17 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, ctx) {
+      if (ctx.isDev && ctx.isClient) {
+        config.module.rules.push({
+          test: /\.md$/,
+          use: ['markdown-loader']
+          // include: path.resolve(__dirname, '../')
+        });
+      }
+      // config.module.rules.push({
+      //   test: /\.svg$/,
+      // })
+    }
   }
 };

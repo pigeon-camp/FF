@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import userBoard from '@/components/userComponent/userBoard.vue';
+import userBoard from '@/components/userProvider/userComponent/userBoard.vue';
 
 export default {
   components: {

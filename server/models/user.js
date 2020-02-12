@@ -25,6 +25,10 @@ module.exports = (sequelize, DataTypes) => {
     admin: {
       type: DataTypes.BOOLEAN,
       allowNull: false
+    },
+    image: {
+      type: DataTypes.STRING(100),
+      allowNull: true
     }
   }, {
     timestamps: true,

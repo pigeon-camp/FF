@@ -1,6 +1,5 @@
 <script>
 import { getComponent } from './ComponentMap';
-
 export default {
   functional: true,
   props: {

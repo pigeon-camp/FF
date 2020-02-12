@@ -30,7 +30,6 @@
       />
 
       <post-image-uploader @imgpost="getImages" />
-      {{ images1 }} zzz
       <v-btn :disabled="!valid" color="success" @click="validate">Submit</v-btn>
     </v-form>
   </v-container>

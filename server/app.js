@@ -11,6 +11,7 @@ require('dotenv').config();
 
 const authRouter = require('./routes/auth');
 const postRouter = require('./routes/post');
+const userRouter = require('./routes/user');
 
 const app = express();
 sequelize.sync();
@@ -20,6 +21,7 @@ app.set('jwt-secret', process.env.JWT_SECRET);
 app.set('view engine', 'pug');
 
 app.use(logger('dev'));
+app.use('/image/post', express.static(path.join(__dirname, 'uploads/posts')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
@@ -39,6 +41,7 @@ app.use(passport.session());
 
 app.use('/api/auth', authRouter);
 app.use('/api/post', postRouter);
+app.use('/api/user', userRouter);
 
 app.use((req, res, next) => {
   const err = new Error('Not Found');

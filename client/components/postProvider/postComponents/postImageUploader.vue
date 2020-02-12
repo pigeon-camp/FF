@@ -17,7 +17,7 @@
       multiple
       @change="getImgUrl"
     />
-    {{ files }}
+
     <div v-for="(image, index) in images" :key="index">
       <v-img height="150" width="150" :src="image" />
       <v-icon @click="deleteImage(index)">mdi-backspace-outline</v-icon>
@@ -26,8 +26,6 @@
 </template>
 
 <script>
-// import _ from 'lodash';
-
 export default {
   data() {
     return {
@@ -69,29 +67,10 @@ export default {
           false
         );
         fr.readAsDataURL(files[i]);
-        // file validation
-        // this.files = [
-        //   ...this.files,
-        //   ..._.map(files, file => ({
-        //     name: file.name,
-        //     size: file.size,
-        //     type: file.type
-        //   }))
-        // ];
       }
       console.log(this.files, '^^');
       this.$emit('imgpost', this.files);
     }
-    // validateFile(file) {
-    //   if (file.size > MAX_SIZE) {
-    //     window.alert(`Max size : ${MAX_SIZE}kb`);
-    //     const idx = this.files.length;
-    //     console.log(idx);
-    //     this.deleteImage(idx);
-    //     return `Max size : ${MAX_SIZE}kb`;
-    //   }
-    //   console.log(file.type, '??');
-    // }
   }
 };
 </script>

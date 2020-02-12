@@ -1,7 +1,7 @@
 const express = require('express');
 const multer = require('multer');
 const path = require('path');
-const { Post } = require('../models');
+const { Post, User } = require('../models');
 const { isLoggedIn, isNotLoggedIn, verifyToken } = require('./authMiddleware');
 
 const router = express.Router();
@@ -40,13 +40,17 @@ router.post('/', isLoggedIn, upload.array('imgPost', 12), async (req, res, next)
   }
 })
 
-router.post('/test', upload.array('imgPost', 12), async (req, res, next) => {
-  const images = [];
-  console.log(req.files);
-  console.log(JSON.parse(req.body.postInfo));
-  for (let i=0; i < req.files.length; i++) {
-    images.push({ filename: `${req.files[i].filename}`})
+router.get('/:id', async (req, res, next) => {
+  try {
+    const post = await Post.findByPk(req.params.id, {
+      include: {
+        model: User
+      }
+    });
+    res.status(200).json({ post });
+  } catch (error) {
+    console.error(error);
+    next(error);
   }
-  res.json({ urls });
-});
+})
 module.exports = router;
