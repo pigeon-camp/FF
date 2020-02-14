@@ -40,3 +40,46 @@
   background-size: cover;
 }
 ```
+
+<!--split:naver1-->
+```html
+<v-btn width="300" height="50" class="_nbtn1" color="#4AB748">
+  <v-row>
+    <v-col cols="3" class="pa-0 _center">
+      <div class="_nbtn1-img" />
+    </v-col>
+    <v-col cols="8" class="pa-0 _center">
+      <span class="subtitle-1">네이버 로그인</span>
+    </v-col>
+  </v-row>
+</v-btn>
+```
+```scss
+._nbtn1 {
+  &-img {
+    width: 41px;
+    height: 41px;
+    background: url('./Elements/naver.svg');
+  }
+  ._center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+```
+
+<!--split:naver2-->
+```html
+<v-btn width="65" height="65" color="#4AB748" class="pa-0 ma-0" depressed>
+  <div class="_nbtn2-img" />
+</v-btn>
+```
+```scss
+._nbtn2-img {
+  width: 2rem;
+  height: 1.8rem;
+  background: url('./Elements/naverfont.svg');
+  background-size: cover;
+}
+```

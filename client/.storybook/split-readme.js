@@ -41,7 +41,7 @@ const SplitReadme = {
             }
           });
           const result = md.render(code);
-          return result;
+          return '<details><summary>코드 보기</summary>' + result + '<details>';
         }
       }
     })

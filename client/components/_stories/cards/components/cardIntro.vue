@@ -1,39 +1,41 @@
 <template>
-  <!-- <div class="_icard">
+  <v-card
+    color="#d0e4f2"
+    class="_icard"
+    width="18rem"
+    height="30rem"
+    tile
+    outlined
+  >
     <div class="_icard-header">
-      <span class="headline cyan--text text--lighten-5">TITLE</span>
+      <v-card-title class="_icard-header-title justify-center">
+        <span class="title white--text">TITLE TITLE TITLE</span>
+      </v-card-title>
     </div>
 
-    <div class="_icard-body pa-3">
-      <div class="_icard-body-top">
-        I'am main
-      </div>
-      <div class="_icard-body-bottom">
-        I'am List
-        <v-list dense disabled class="blue-grey lighten-2">
-          <v-list-item v-for="n in 4" :key="n" class="pa-0 ma-0">
-            <v-list-item-icon class="mr-1">
-              <v-icon v-text="test_icon" />
-            </v-list-item-icon>
-            <v-list-item-content>
-              <v-list-item-title v-text="test_list" />
-            </v-list-item-content>
-          </v-list-item>
-        </v-list>
-      </div>
+    <v-card-text class="_icard-body-1">
+      <p class="mb-0">TEXT</p>
+    </v-card-text>
+
+    <div class="_icard-body-2">
+      <v-list dense disabled class="blue-grey lighten-2">
+        <v-list-item v-for="n in 4" :key="n">
+          <v-list-item-icon class="mr-1">
+            <v-icon v-text="test_icon" />
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title v-text="test_list" />
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
     </div>
 
-    <div class="_icard-footer mx-3 ">
-      <v-btn width="95%" color="orange" outlined rounded>
+    <v-card-actions class="_icard-footer justify-center">
+      <v-btn width="90%" color="orange" outlined rounded>
         Contribute
       </v-btn>
-    </div>
-  </div> -->
-  <v-layout>
-    <v-flex>
-      
-    </v-flex>
-  </v-layout>
+    </v-card-actions>
+  </v-card>
 </template>
 
 <script>
@@ -48,35 +50,34 @@ export default {
 </script>
 
 <style lang="scss">
+$h-icard-b-1: 7.5rem;
+$h-icard-b-2: 13rem;
+$h-icard-t: 4rem;
+$h-icard: 30rem;
+
 ._icard {
-  background-color: #f5f8fa;
-  width: 300px;
-  height: 500px;
-  border-radius: 10px;
+  border-radius: 0.8rem;
   &-header {
-    border-radius: 10px 10px 0 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #2e3949;
-    width: 100%;
-    height: 65px;
+    &-title {
+      height: $h-icard-t;
+      background-color: #2e3949;
+      border-radius: 0.8rem 0.8rem 0 0;
+    }
   }
 
   &-body {
-    &-top {
+    &-1 {
       background-color: #bbbbbb;
-      height: 120px;
+      height: $h-icard-b-1;
     }
-    &-bottom {
+    &-2 {
       background-color: #90a4ae;
-      height: 200px;
+      height: $h-icard-b-2;
     }
   }
 
   &-footer {
-    height: 80px;
-    background-color: #2e3949;
+    height: $h-icard - ($h-icard-b-1 + $h-icard-b-2 + $h-icard-t);
   }
 }
 </style>

@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuetify from 'vuetify';
-import 'vuetify/dist/vuetify.css'
+import './vuetify.css'
 import '../assets/story.css'
 import '@mdi/font/css/materialdesignicons.css'
 

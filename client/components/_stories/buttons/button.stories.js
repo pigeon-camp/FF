@@ -1,7 +1,9 @@
-import button from './button.story.vue';
+import SocialBtn from './socialBtn/socialbtn.story.vue';
+import NormalBtn from './normalBtn/normalBtn.story.vue';
 
 export default {
   title: 'button'
 };
 
-export const ButtonView = () => button;
+export const SocialButtonView = () => SocialBtn;
+export const NormalButtonView = () => NormalBtn;

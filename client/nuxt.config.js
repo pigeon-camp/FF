@@ -33,7 +33,8 @@ export default {
    */
   plugins: [
     { src: '~/plugins/editor/editorjs', mode: 'client' },
-    { src: '~/plugins/moment' }
+    { src: '~/plugins/moment' },
+    { src: '~/plugins/apexchart' }
   ],
   /*
    ** Nuxt.js dev-modules
